@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+#
+#   █████╗ ██╗     ██╗ █████╗ ███████╗███████╗███████╗
+#  ██╔══██╗██║     ██║██╔══██╗██╔════╝██╔════╝██╔════╝
+#  ███████║██║     ██║███████║███████╗█████╗  ███████╗
+#  ██╔══██║██║     ██║██╔══██║╚════██║██╔══╝  ╚════██║
+#  ██║  ██║███████╗██║██║  ██║███████║███████╗███████║
+#  ╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
+#                                                     
+# --------------
+# Other Aliases|
+# --------------
+alias zoombot='python Desktop/Python/ZoomBot/main.py'
+alias mail='open /var/mail/aaruaadi'
+alias list='tree -L 1 -C'
+alias mysql='/usr/local/mysql/bin/mysql -u root -p'
+alias edit='code'
+alias profile='code /Users/aaruaadi/.bash_profile'
+alias sync='bash ~/.backup; killall Finder'
+alias vim='nvim'
+# ------------
+# Git Aliases|
+# ------------ 
+alias ga='git add'
+alias gaa='git add .'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gd='git diff'
+alias gi='git init'
+alias gl='git log'
+alias gp='git pull'
+alias gpsh='git push -u'
+alias gss='git status -s'
+alias gs='echo ""; echo "*********************************************"; echo -e "   DO NOT FORGET TO PULL BEFORE COMMITTING"; echo "*********************************************"; echo ""; git status'
+#--------------
+# Bash Aliases|
+#--------------
+alias l='ls -a'
+alias ll='ls -al'
+alias o='open .'
+alias rmm='rm -rf'
+# Directory navigation aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias emptybin='rm -rf ~/.Trash'
+
+#----------------
+# Python Aliases|
+#----------------
+alias menv='virtualenv venv'
+alias py='python'
+alias aenv='source venv/bin/activate'
+alias dserv='python manage.py runserver'
+# Get week number
+alias week='date +%V'
+# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias update='brew update; brew upgrade; brew cleanup; npm update -g;'
+# Google Chrome
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+# Show active network interfaces
+alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
+# Flush Directory Service cache
+alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec ${SHELL} -l"
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+alias c="cd ~/Desktop/Coding/"
+alias d="cd ~/Desktop/"
+alias cc="code"
+alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
