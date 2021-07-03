@@ -17,8 +17,8 @@
 rm -rf ./.git 2> /dev/null;
 rm -rf ./install-linux.sh 2> /dev/null;
 rm -rf ./README.md 2> /dev/null;
-mv ./.* ../ 2> /dev/null;
-cd ../ 2> /dev/null;
+mv ./.* ~/ 2> /dev/null;
+cd ~/ 2> /dev/null;
 bash ./.macos 2> /dev/null;
 bash ./.brew 2> /dev/null;
 rm -rf dotfiles 2> /dev/null;
